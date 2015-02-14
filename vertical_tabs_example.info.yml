@@ -1,0 +1,5 @@
+name: 'Vertical tabs example'
+type: module
+description: 'Show how to use vertical tabs for enhancing user experience.'
+package: Example modules
+core: 8.x

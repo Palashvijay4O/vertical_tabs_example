@@ -1,0 +1,7 @@
+vertical_tabs_example.description:
+  path: 'examples/vertical_tabs'
+  defaults:
+    _controller: '\Drupal\vertical_tabs_example\Controller\VerticalTabsExampleController::description'
+    _title: 'Vertical tabs example'
+  requirements:
+    _access: 'TRUE'
