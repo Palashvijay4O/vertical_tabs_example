@@ -1,0 +1,6 @@
+vertical_tabs_example.link_js:
+  version: 1.x
+  js:
+    js/vertical_tabs_example.js: {}
+  dependencies:
+    - core/jquery
