@@ -19,8 +19,8 @@ class VerticalTabsExampleController {
    * A simple controller method to explain what the Vertical tabs example is about.
    */
   public function description() {
-    $url = Url::fromRoute('node/add');
-    //$content_add = \Drupal::l(t('content_add'), $url);
+    $url = Url::fromRoute('node.add_page');
+    $content_add = \Drupal::l(t('content_add'), $url);
     $build = array(
         '#markup' => t('The Vertical Tabs Example shows how a
         custom module can add a vertical tab to a node edit form,
