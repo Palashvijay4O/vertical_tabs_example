@@ -21,8 +21,8 @@ function vertical_tabs_example_form_node_form_alter(array &$form, FormStateInter
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
       '#tree' => TRUE,
-      // Send this tab to the top of the list.
-      '#weight' => -99,
+      // Send this tab to the top of the bottom of the page.
+      '#weight' => 99,
       // The #group value must match the name of the vertical tabs element.
       // In most cases, this is 'additional_settings'.
       '#group' => 'additional_settings',
