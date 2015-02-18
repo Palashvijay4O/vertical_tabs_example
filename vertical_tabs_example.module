@@ -10,10 +10,10 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * @param array $form
  * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @TODO change fieldset to details and document js attachment.
  */
 function vertical_tabs_example_form_node_form_alter(array &$form, FormStateInterface $form_state) {
-  // Only include on node add/edit forms.
-
+    $form['#attached']['library'][] = 'vertical_tabs_example/vertical_tabs_example';
     // Create a fieldset that will be included in the vertical tab.
     $form['vertical_tabs_example'] = array(
       '#type' => 'fieldset',
@@ -21,20 +21,15 @@ function vertical_tabs_example_form_node_form_alter(array &$form, FormStateInter
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
       '#tree' => TRUE,
-      // Send this tab to the top of the bottom of the page.
-      '#weight' => 99,
+      // Send this tab to the top of the list.
+      '#weight' => -99,
       // The #group value must match the name of the vertical tabs element.
       // In most cases, this is 'additional_settings'.
-      '#group' => 'additional_settings',
+      '#group' => 'advanced',
       // Vertical tabs provide its most usable appearance when they are used to
       // include a summary of the information contained in the fieldset. To do
       // this, we attach additional JavaScript to handle changing the summary
       // when form settings are changed.
-     /* '#attached' => array(
-        'js' => array(
-          'vertical-tabs' => drupal_get_path('module', 'vertical_tabs_example') . '/js/vertical_tabs_example.js',
-        ),
-      ),*/
     );
 
     // The form elements below provide a demonstration of how a fieldset
@@ -73,7 +68,3 @@ function vertical_tabs_example_form_node_form_alter(array &$form, FormStateInter
 //  }
 }
 
-
-/**
- * @} End of "defgroup vertical_tabs_example".
- */

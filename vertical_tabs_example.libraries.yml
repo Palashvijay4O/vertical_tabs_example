@@ -1,4 +1,4 @@
-vertical_tabs_example.link_js:
+vertical_tabs_example:
   version: 1.x
   js:
     js/vertical_tabs_example.js: {}
